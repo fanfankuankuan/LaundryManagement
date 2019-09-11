@@ -2,7 +2,7 @@
     <string name="app_name">LaundryManagement</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_world">Hello World!</string>
+    <string name="hello_world">Welcome to Laundry System!</string>
     <string name="login">Login</string>
     <string name="registerlink">No account yet? Create one</string>
     <string name="register">submit</string>

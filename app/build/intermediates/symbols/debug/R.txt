@@ -14,6 +14,8 @@ int anim design_bottom_sheet_slide_in 0x7f01000c
 int anim design_bottom_sheet_slide_out 0x7f01000d
 int anim design_snackbar_in 0x7f01000e
 int anim design_snackbar_out 0x7f01000f
+int anim fadein 0x7f010010
+int anim fadeout 0x7f010011
 int animator design_appbar_state_list_animator 0x7f020000
 int animator design_fab_hide_motion_spec 0x7f020001
 int animator design_fab_show_motion_spec 0x7f020002

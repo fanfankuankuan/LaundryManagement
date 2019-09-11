@@ -1,4 +1,4 @@
-#Sat Sep 07 12:42:48 MDT 2019
+#Tue Sep 10 21:33:17 MDT 2019
 base.0=F\:\\Users\\fanfan\\AndroidStudioProjects\\LaundryManagement\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 path.1=classes.dex
 renamed.1=classes2.dex
