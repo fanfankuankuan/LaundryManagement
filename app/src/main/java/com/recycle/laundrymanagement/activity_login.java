@@ -75,6 +75,7 @@ public class activity_login extends AppCompatActivity {
                                 Config.adminFlag = true;
                             }
                             startActivity(new Intent(activity_login.this,OnBoardingActivity.class));
+                            overridePendingTransition(R.anim.fadein, R.anim.fadein);
                         }
                         else{
                             Toast.makeText(context, "Wrong Email or Password. Please Try again!", Toast.LENGTH_SHORT).show();
@@ -101,6 +102,7 @@ public class activity_login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(activity_login.this, activity_register.class));
+                //overridePendingTransition(R.anim.fadein, R.anim.fadein);
             }
         });
 

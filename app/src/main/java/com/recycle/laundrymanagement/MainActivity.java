@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadein);
             }
-        }, 4000);
+        }, 3500);
 
     }
 

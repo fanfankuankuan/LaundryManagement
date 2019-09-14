@@ -97,6 +97,7 @@ public class activity_register extends AppCompatActivity {
                                 public void run() {
                                     Config.useremail = useremail;
                                     startActivity(new Intent(activity_register.this,OnBoardingActivity.class));
+                                    overridePendingTransition(R.anim.fadein, R.anim.fadein);
                                 }
                             }, 3000);
 
