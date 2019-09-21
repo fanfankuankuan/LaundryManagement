@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.messaging.FirebaseMessaging;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.fadein, R.anim.fadein);
             }
         }, 3500);
+
+        FirebaseMessaging.getInstance().subscribeToTopic("android");
 
     }
 

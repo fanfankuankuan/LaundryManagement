@@ -1,7 +1,7 @@
-#Sun Sep 15 20:50:28 MDT 2019
-base.0=F\:\\Users\\fanfan\\AndroidStudioProjects\\LaundryManagement\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+#Sat Sep 21 05:07:24 EDT 2019
+base.0=C\:\\Users\\Zhi Li\\Desktop\\gitBack\\LaundryManagement-branchmerge\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=F\:\\Users\\fanfan\\AndroidStudioProjects\\LaundryManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.1=C\:\\Users\\Zhi Li\\Desktop\\gitBack\\LaundryManagement-branchmerge\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

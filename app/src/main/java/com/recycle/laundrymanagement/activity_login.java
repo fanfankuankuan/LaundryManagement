@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class activity_login extends AppCompatActivity {
 
@@ -73,6 +74,7 @@ public class activity_login extends AppCompatActivity {
                             Config.useremail = useremail;
                             if (useradmin == dataSnapshot.child(useremail).child("user_admin").getValue()){
                                 Config.adminFlag = true;
+                                FirebaseMessaging.getInstance().subscribeToTopic("admin");
                             }
                             startActivity(new Intent(activity_login.this,WashingMachineOverview.class));
                             overridePendingTransition(R.anim.fadein, R.anim.fadein);

@@ -1069,6 +1069,9 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable washing_machine
+drawable washing_machine_finished
+drawable washing_machine_overtime
+drawable washing_machine_unavailable
 font blastimo
 font blastimosans
 font blastimoswash
@@ -1464,6 +1467,7 @@ string common_signin_button_text_long
 string default_web_client_id
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key

@@ -50,7 +50,7 @@ public class WashingMachineOverviewFragment extends Fragment {
             WashingMachine wm = new WashingMachine();
             wm.setDrawable_label("available");
             wm.setWashing_machine_id(i);
-            wm.setUser_email(Config.useremail);
+            //wm.setUser_email(Config.useremail);
             wm.setStatus_id(1);
             wm.setStart_time(0);
             wm.setEnd_time(0);

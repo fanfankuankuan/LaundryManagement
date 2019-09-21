@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -88,9 +89,11 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                     timePicker.setListener(new PickTime.PickTimeListener(){
                                         @Override
                                         public void onPositiveClick() {
+
+                                            FirebaseMessaging.getInstance().subscribeToTopic(String.valueOf(position));
+
                                             int mode = timePicker.timeSelected;
                                             if (mode != -1) {
-                                                viewHolder.mImageView.setColorFilter(Color.BLUE);
                                                 final String status_id_value_change = "2";
                                                 long start_time = System.currentTimeMillis();
                                                 long end_time = System.currentTimeMillis();
@@ -108,6 +111,8 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                                 SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm:ss");
                                                 Date format_start = new Date(start_time);
                                                 Date format_end = new Date(end_time);
+                                                mdatabase.child("/washing_machine/" + position + "/user_email").setValue(Config.useremail);
+                                                mMachines.get(position).setUser_email(Config.useremail);
                                                 mdatabase.child("/washing_machine/" + position + "/start_time").setValue(sdf.format(format_start));
                                                 mdatabase.child("/washing_machine/" + position + "/end_time").setValue(sdf.format(format_end));
                                                 mdatabase.child("status").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -119,6 +124,7 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                                                 mMachines.get(position).setDrawable_label(status_value);
                                                                 mdatabase.child("/washing_machine/" + position + "/drawable_label").setValue(status_value);
                                                                 viewHolder.mTextView.setText(status_value);
+                                                                viewHolder.mImageView.setImageResource(R.drawable.washing_machine_unavailable);
                                                             }
                                                         }
                                                     }
@@ -144,7 +150,9 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                     });
                                     timePicker.show(homeFragment.getFragmentManager(), "timepk");
                                 } else if(status_id_value.equals("3") || status_id_value.equals("4")) {
-                                    viewHolder.mImageView.clearColorFilter();
+
+                                    FirebaseMessaging.getInstance().unsubscribeFromTopic(String.valueOf(position));
+
                                     final String status_id_value_change = "1";
                                     long start_time = 0;
                                     long end_time = 0;
@@ -164,6 +172,7 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                                     mMachines.get(position).setDrawable_label(status_value);
                                                     mdatabase.child("/washing_machine/" + position + "/drawable_label").setValue(status_value);
                                                     viewHolder.mTextView.setText(status_value);
+                                                    viewHolder.mImageView.setImageResource(R.drawable.washing_machine);
                                                 }
                                             }
                                         }
@@ -230,7 +239,6 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                 final String status_id_key = feature_snapShot.getKey();
                                 String status_id_value = feature_snapShot.getValue().toString();
                                 if(status_id_value.equals("2") && curr_time >= end_time) {
-                                    viewHolder.mImageView.setColorFilter(Color.YELLOW);
                                     final String status_id_value_change = "3";
                                     mMachines.get(position).setStatus_id(Integer.parseInt(status_id_value_change));
                                     mdatabase.child("/washing_machine/" + position + "/" + status_id_key).setValue(status_id_value_change);
@@ -243,6 +251,7 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                                     mMachines.get(position).setDrawable_label(status_value);
                                                     mdatabase.child("/washing_machine/" + position + "/drawable_label").setValue(status_value);
                                                     viewHolder.mTextView.setText(status_value);
+                                                    viewHolder.mImageView.setImageResource(R.drawable.washing_machine_finished);
                                                 }
                                             }
                                         }
@@ -253,7 +262,6 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                         }
                                     });
                                 }else if(status_id_value.equals("3") && curr_time >= end_time + 10000) {
-                                    viewHolder.mImageView.setColorFilter(Color.RED);
                                     final String status_id_value_change = "4";
                                     mMachines.get(position).setStatus_id(Integer.parseInt(status_id_value_change));
                                     mdatabase.child("/washing_machine/" + position + "/" + status_id_key).setValue(status_id_value_change);
@@ -266,6 +274,7 @@ public class OverviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                                     mMachines.get(position).setDrawable_label(status_value);
                                                     mdatabase.child("/washing_machine/" + position + "/drawable_label").setValue(status_value);
                                                     viewHolder.mTextView.setText(status_value);
+                                                    viewHolder.mImageView.setImageResource(R.drawable.washing_machine_overtime);
                                                 }
                                             }
                                         }
