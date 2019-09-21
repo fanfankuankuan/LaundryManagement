@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".activity_login">
+
+    <LinearLayout
+        android:id="@+id/loginframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="100dp"
+        android:paddingRight="24dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blastimo"
+            android:gravity="center_horizontal"
+            android:text="Laundry  Management  System!"
+            android:textColor="#942F53"
+            android:textSize="33dp" />
+
+        <!-- Username tag -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="45dp"
+            android:text="Email"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            />
+
+        <!-- Username edit tag -->
+        <EditText
+            android:id="@+id/emaillogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            />
+
+        <!-- Password tag -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="45dp"
+            android:text="Password"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            />
+
+        <!-- Password edit tag -->
+        <EditText
+            android:id="@+id/passwordlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            />
+
+        <!-- Button Tag -->
+        <Button
+            android:id="@+id/submit"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/login"
+            />
+
+        <!-- Register Tag -->
+        <TextView
+            android:id="@+id/registerlink"
+            android:layout_marginTop="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/registerlink"
+            android:gravity="center"
+            android:textSize="16dip"/>
+    </LinearLayout>
+
+</RelativeLayout>

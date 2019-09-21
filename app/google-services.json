@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "391497504993",
+    "firebase_url": "https://laundryteam2.firebaseio.com",
+    "project_id": "laundryteam2",
+    "storage_bucket": "laundryteam2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391497504993:android:e77290b02826917d",
+        "android_client_info": {
+          "package_name": "com.recycle.laundrymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391497504993-d3voha0m0g6q4hufbl4v9610df6kkbve.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.recycle.laundrymanagement",
+            "certificate_hash": "ebcc12bee5167c4b7a511e49bdf26738a09c2c49"
+          }
+        },
+        {
+          "client_id": "391497504993-2qnhtcbpamqpe9tag8p8geosfgd3nh57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjifIUWCKPtWL67X7uYyY7tuBNDorpUZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391497504993-2qnhtcbpamqpe9tag8p8geosfgd3nh57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+#Sat Sep 21 16:16:15 EDT 2019
+base.0=/Users/apple/Desktop/ECE114/LaundryManagement/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/apple/Desktop/ECE114/LaundryManagement/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex

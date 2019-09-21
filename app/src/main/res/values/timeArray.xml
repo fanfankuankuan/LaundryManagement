@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="timeDuration">
+        <item>5s</item>
+        <item>10s</item>
+        <item>15s</item>
+    </array>
+</resources>
